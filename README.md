@@ -1,97 +1,124 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# WayExplore 🌍
 
-# Getting Started
+A React Native CLI application that helps students explore study abroad programs and universities around the world.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+Built as a technical assignment for the **WayGood** React Native Internship.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📱 Screens
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+| Home Screen | Details Screen |
+|---|---|
+| Browse university programs with search | Full program details, intake, tuition & links |
 
-```sh
-# Using npm
+### Features
+- 🔍 **Live Search** — filter by university name or country
+- 🃏 **Program Cards** — country flag, ranking badge, intake info
+- 📖 **Details Screen** — full description, programs offered, tuition range
+- 🌐 **Deep Links** — opens official university website
+- ✨ **Smooth Animations** — screen entry fade + slide transitions
+- 🌙 **Dark Theme** — premium dark UI with purple accent palette
+- 📐 **Responsive Layout** — adapts to all screen sizes
+
+---
+
+## 🚀 Setup & Run
+
+### Prerequisites
+- Node.js >= 22
+- React Native CLI environment set up ([official guide](https://reactnative.dev/docs/set-up-your-environment))
+- Android Studio with an emulator or physical Android device
+- JDK 17+
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <your-repository-url>
+cd WayExplore
+
+# Install dependencies
+npm install
+
+# Start Metro bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+# Run on Android (in a new terminal)
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+### Run on iOS (macOS only)
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+```bash
+cd ios && pod install && cd ..
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🏗 Project Structure
 
-## Step 3: Modify your app
+```
+WayExplore/
+├── src/
+│   ├── data/
+│   │   └── programs.ts        # Static JSON data (8 universities)
+│   ├── navigation/
+│   │   └── AppNavigator.tsx   # Stack navigator (Home → Details)
+│   ├── screens/
+│   │   ├── HomeScreen.tsx     # University list + search
+│   │   └── DetailsScreen.tsx  # Full program details
+│   ├── components/
+│   │   └── ProgramCard.tsx    # Reusable card component
+│   └── theme/
+│       └── colors.ts          # Centralized color palette
+├── App.tsx                    # Root component
+└── index.js                   # Entry point
+```
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🛠 Tech Stack
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+| Library | Purpose |
+|---|---|
+| React Native CLI | App framework |
+| TypeScript | Type safety |
+| React Navigation v7 | Screen navigation |
+| react-native-screens | Native screen optimization |
+| react-native-safe-area-context | Safe area handling |
+| react-native-gesture-handler | Touch gesture support |
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 🎨 Design Highlights
 
-You've successfully run and modified your React Native App. :partying_face:
+- **Dark theme** background `#0F0F1A` with card surfaces `#1E1E35`
+- **Purple primary** `#5B4EFF` accent across badges, buttons and stats
+- **Animated transitions** using React Native's `Animated` API (no external lib)
+- **Responsive grids** using `flexWrap` and `Dimensions` API
+- **Modular components** — `ProgramCard` is fully reusable and decoupled
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📊 Data
 
-# Troubleshooting
+The app uses 8 hand-crafted static university records with:
+- University name, country & flag emoji
+- Short + full description
+- Available programs / majors
+- Tuition range
+- Intake months
+- World ranking
+- Official website URL
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 📬 Submission
 
-To learn more about React Native, take a look at the following resources:
+This project was built for the WayGood React Native Intern assignment.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Candidate:** [Your Name]  
+**Email:** [Your Email]  
+**GitHub:** [Your GitHub Profile]
