@@ -1,16 +1,15 @@
-# WayExplore 🌍
+# WayExplore 
 
 A React Native CLI application that helps students explore study abroad programs and universities around the world.
 
 Built as a technical assignment for the **WayGood** React Native Internship.
 
----
-
 ## 📱 Screens
 
-| Home Screen | Details Screen |
-|---|---|
-| Browse university programs with search | Full program details, intake, tuition & links |
+ Home Screen and Details Screen 
+
+ Browse university programs with search 
+ Full program details, intake, tuition & links
 
 ### Features
 - 🔍 **Live Search** — filter by university name or country
@@ -20,8 +19,6 @@ Built as a technical assignment for the **WayGood** React Native Internship.
 - ✨ **Smooth Animations** — screen entry fade + slide transitions
 - 🌙 **Dark Theme** — premium dark UI with purple accent palette
 - 📐 **Responsive Layout** — adapts to all screen sizes
-
----
 
 ## 🚀 Setup & Run
 
@@ -113,12 +110,3 @@ The app uses 8 hand-crafted static university records with:
 - World ranking
 - Official website URL
 
----
-
-## 📬 Submission
-
-This project was built for the WayGood React Native Intern assignment.
-
-**Candidate:** [Your Name]  
-**Email:** [Your Email]  
-**GitHub:** [Your GitHub Profile]
